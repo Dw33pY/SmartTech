@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smartech - Leading the New Digital World</title>
+    <title>Smartechn - Leading the New Digital World</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,20 +23,30 @@
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <div class="logo-img">ST</div>
-                Smartech
+            <a href="index.html" class="logo" onclick="reloadHome()">
+                <div class="logo-img">
+                    <img src="logo.png" alt="Smartechn Logo">
+                </div>
+                SMARTECHN
             </a>
             
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="reloadHome()">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <button class="nav-cta" onclick="scrollToContact()">Get Started</button>
+            </div>
             
-            <button class="nav-cta">Get Started</button>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -51,6 +61,7 @@
             </div>
         </div>
         <div class="hero-shape" data-aos="zoom-in" data-aos-delay="600"></div>
+        <div class="hero-particles" id="particles-js"></div>
     </section>
 
     <!-- Services Section -->
@@ -118,7 +129,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
-                    <h2>Why Choose Smartech?</h2>
+                    <h2>Why Choose Smartechn?</h2>
                     <p>With over a decade of experience in the digital space, we've helped businesses of all sizes navigate the complexities of digital transformation and achieve remarkable results.</p>
                     <p>Our team of experts combines technical expertise with creative thinking to deliver solutions that not only meet your current needs but also prepare you for future challenges and opportunities.</p>
                     
@@ -141,7 +152,7 @@
                 </div>
                 
                 <div class="about-image" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Smartech Team" class="about-img">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Smartechn Team" class="about-img">
                 </div>
             </div>
         </div>
@@ -157,7 +168,7 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                    <p class="testimonial-text">Smartech completely transformed our online presence. Their team delivered a stunning website and digital strategy that increased our leads by 150% in just three months.</p>
+                    <p class="testimonial-text">Smartechn completely transformed our online presence. Their team delivered a stunning website and digital strategy that increased our leads by 150% in just three months.</p>
                     <div class="testimonial-author">
                         <div class="author-img">JD</div>
                         <div class="author-info">
@@ -168,7 +179,7 @@
                 </div>
                 
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                    <p class="testimonial-text">The mobile app developed by Smartech has revolutionized how we serve our customers. It's intuitive, fast, and has significantly improved customer satisfaction scores.</p>
+                    <p class="testimonial-text">The mobile app developed by Smartechn has revolutionized how we serve our customers. It's intuitive, fast, and has significantly improved customer satisfaction scores.</p>
                     <div class="testimonial-author">
                         <div class="author-img">SW</div>
                         <div class="author-info">
@@ -179,7 +190,7 @@
                 </div>
                 
                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
-                    <p class="testimonial-text">Working with Smartech was a game-changer for our business. Their cloud solutions helped us scale efficiently while reducing costs by 30%.</p>
+                    <p class="testimonial-text">Working with Smartechn was a game-changer for our business. Their cloud solutions helped us scale efficiently while reducing costs by 30%.</p>
                     <div class="testimonial-author">
                         <div class="author-img">MK</div>
                         <div class="author-info">
@@ -218,7 +229,8 @@
                         </div>
                         <div class="contact-text">
                             <h4>Phone</h4>
-                            <p>+254711693981</p>
+                            <p>+254711603981</p>
+                            <p>+971586342099</p>
                         </div>
                     </div>
                     
@@ -228,17 +240,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <p>info@smartech.co.ke</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Website</h4>
-                            <p>www.smartech.co.ke</p>
+                            <p>smartechn@info.co.ke</p>
                         </div>
                     </div>
                 </div>
@@ -246,26 +248,18 @@
                 <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
                             <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email Address</label>
                             <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Subject">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
                             <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -278,8 +272,10 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <div class="logo-img">ST</div>
-                        Smartech
+                        <div class="logo-img">
+                            <img src="logo.png">
+                        </div>
+                        SMARTECHN
                     </div>
                     <p>Leading the new digital world with innovative solutions that transform businesses and drive growth in the digital age.</p>
                     <div class="social-links">
@@ -316,26 +312,32 @@
                     <h3 class="footer-heading">Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 445 00100 Nairobi, Kenya</li>
-                        <li><i class="fas fa-phone"></i> +254711693981</li>
-                        <li><i class="fas fa-envelope"></i> info@smartech.co.ke</li>
-                        <li><i class="fas fa-globe"></i> www.smartech.co.ke</li>
+                        <li><i class="fas fa-phone"></i> +254711603981</li>
+                        <li><i class="fas fa-phone"></i> +971586342099</li>
+                        <li><i class="fas fa-envelope"></i> smartechn@info.co.ke</li>
+                        <li><i class="fas fa-globe"></i> www.smartechn.co.ke</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Smartech. All Rights Reserved. | Leading the New Digital World</p>
+                <p>&copy; 2025 Smartechn. All Rights Reserved. | Leading the New Digital World</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/254711693981" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/254711603981" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
