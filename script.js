@@ -497,3 +497,26 @@ We're excited to have you here!
 Press 's' for snow or 't' for tech effects! 🎮
 
 `, 'font-size: 18px; font-weight: bold; color: #2563eb;', 'font-size: 14px; color: #64748b;');
+
+// 🛠️ FIX: Mobile Overflow Prevention
+function fixMobileOverflow() {
+    // Prevent zoom on input focus for iOS
+    document.addEventListener('touchstart', function() {}, {passive: true});
+    
+    // Fix viewport height for mobile
+    function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
+}
+
+// Call this function in your DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+    fixMobileOverflow();
+    
+    // Your existing loading screen and other code...
+});

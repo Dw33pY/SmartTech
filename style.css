@@ -1590,3 +1590,324 @@ header.scrolled {
 .home-reload {
     animation: homeReload 0.3s ease-in-out;
 }
+
+/* 🛠️ FIX: Mobile Overflow Prevention */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fix for hero section overflow */
+.hero {
+    min-height: auto;
+    overflow: hidden;
+}
+
+.hero-shape {
+    display: none; /* Hide on mobile to prevent overflow */
+}
+
+/* Fix for services section */
+.services {
+    overflow: hidden;
+}
+
+/* Fix for about section */
+.about {
+    overflow: hidden;
+}
+
+/* Fix for testimonials */
+.testimonials {
+    overflow: hidden;
+}
+
+/* Fix for contact section */
+.contact {
+    overflow: hidden;
+}
+
+/* Fix for footer */
+footer {
+    overflow: hidden;
+}
+
+/* 🛠️ FIX: Mobile-Specific Overflow Solutions */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Fix hero section for mobile */
+    .hero {
+        padding: 120px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+    
+    /* Fix service cards grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+        margin: 0 5px;
+    }
+    
+    /* Fix about section layout */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stat {
+        padding: 20px 15px;
+    }
+    
+    /* Fix testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 25px;
+        margin: 0 5px;
+    }
+    
+    /* Fix contact section */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    /* Fix footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Hide complex animations on mobile */
+    .hero:before {
+        animation: none;
+    }
+    
+    .hero-shape {
+        display: none;
+    }
+    
+    /* Reduce padding on sections */
+    .services, .about, .testimonials, .contact {
+        padding: 80px 0;
+    }
+    
+    /* Fix section titles */
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title p {
+        font-size: 1.1rem;
+    }
+    
+    /* Fix buttons for mobile */
+    .btn {
+        padding: 16px 25px;
+        font-size: 15px;
+    }
+    
+    /* Fix navigation for mobile */
+    .nav-menu {
+        width: 280px;
+    }
+    
+    /* Fix logo size */
+    .logo {
+        font-size: 22px;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* 🛠️ FIX: Extra Small Mobile Screens */
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 25px 15px;
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    
+    .testimonial-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-form {
+        padding: 25px 15px;
+    }
+    
+    /* Reduce all section padding */
+    .services, .about, .testimonials, .contact {
+        padding: 60px 0;
+    }
+    
+    /* Fix footer padding */
+    footer {
+        padding: 60px 0 30px;
+    }
+}
+
+/* 🛠️ FIX: Prevent Animation Overflow */
+@media (max-width: 768px) {
+    [data-aos] {
+        /* Disable some complex animations on mobile */
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    /* Specifically disable transform animations that cause overflow */
+    [data-aos^="fade"][data-aos^="fade"] {
+        transform: none !important;
+    }
+}
+
+/* 🛠️ FIX: Ensure Proper Viewport Height */
+.hero {
+    min-height: 100vh;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        height: auto;
+    }
+}
+
+/* 🛠️ FIX: WhatsApp and Back-to-Top Button Positioning */
+@media (max-width: 480px) {
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+    
+    .back-to-top {
+        bottom: 85px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+/* 🛠️ FIX: Loading Screen for Mobile */
+@media (max-width: 768px) {
+    .tech-loader {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .loading-text {
+        font-size: 1rem;
+    }
+    
+    .loading-progress {
+        width: 150px;
+    }
+}
+
+/* 🛠️ FIX: Form Elements for Mobile */
+@media (max-width: 480px) {
+    .form-control {
+        padding: 16px 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+/* 🛠️ FIX: Prevent Horizontal Scrolling */
+* {
+    max-width: 100%;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 🛠️ FIX: Safe Area Insets for Notched Phones */
+@supports(padding: max(0px)) {
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+    
+    .hero {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
