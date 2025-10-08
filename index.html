@@ -23,7 +23,7 @@
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo" onclick="reloadHome()">
+            <a href="index.html" class="logo">
                 <div class="logo-img">
                     <img src="logo.png" alt="Smartechn Logo">
                 </div>
@@ -32,14 +32,14 @@
             
             <div class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#home" onclick="reloadHome()">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 
-                <button class="nav-cta" onclick="scrollToContact()">Get Started</button>
+                <button class="nav-cta" onclick="location.href='contact.html'">Get Started</button>
             </div>
             
             <div class="burger-menu">
@@ -56,12 +56,121 @@
             <h1 data-aos="fade-right" data-aos-delay="200">Leading the New Digital World</h1>
             <p data-aos="fade-right" data-aos-delay="300">We transform businesses with cutting-edge digital solutions that drive growth, innovation, and competitive advantage in today's fast-paced digital landscape.</p>
             <div class="hero-btns" data-aos="fade-right" data-aos-delay="400">
-                <a href="#services" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Services</a>
-                <a href="#contact" class="btn btn-secondary"><i class="fas fa-phone"></i> Contact Us</a>
+                <a href="services.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Services</a>
+                <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Contact Us</a>
             </div>
         </div>
         <div class="hero-shape" data-aos="zoom-in" data-aos-delay="600"></div>
         <div class="hero-particles" id="particles-js"></div>
+    </section>
+
+    <!-- Circular Carousel Section -->
+    <section class="circular-carousel-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Digital Ecosystem</h2>
+                <p>Explore our comprehensive digital solutions in an immersive experience</p>
+            </div>
+            
+            <div class="circular-carousel-container">
+                <div class="carousel-orbit">
+                    <div class="orbit-center">
+                        <div class="center-content">
+                            <i class="fas fa-brain"></i>
+                            <h3>Digital Core</h3>
+                            <p>Innovation Hub</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Items -->
+                    <div class="carousel-item active" data-index="0">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>Stunning websites & applications</p>
+                            <a href="services.html#web-development" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-index="1">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>App Development</h4>
+                            <p>Native & cross-platform apps</p>
+                            <a href="services.html#app-development" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-index="2">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Digital Marketing</h4>
+                            <p>Data-driven growth strategies</p>
+                            <a href="services.html#digital-marketing" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-index="3">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h4>Cloud Solutions</h4>
+                            <p>Scalable infrastructure</p>
+                            <a href="services.html#cloud-solutions" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-index="4">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Cyber Security</h4>
+                            <p>Complete protection</p>
+                            <a href="services.html#cyber-security" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" data-index="5">
+                        <div class="item-content">
+                            <div class="item-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>AI & Automation</h4>
+                            <p>Intelligent solutions</p>
+                            <a href="services.html#ai-automation" class="item-link">Explore →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                    <span class="indicator" data-index="4"></span>
+                    <span class="indicator" data-index="5"></span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
@@ -79,6 +188,7 @@
                     </div>
                     <h3>Web Development</h3>
                     <p>Custom websites and web applications built with the latest technologies for optimal performance and user experience.</p>
+                    <a href="services.html#web-development" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
@@ -87,6 +197,7 @@
                     </div>
                     <h3>App Development</h3>
                     <p>Native and cross-platform mobile applications that deliver seamless experiences across all devices.</p>
+                    <a href="services.html#app-development" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="400">
@@ -95,6 +206,7 @@
                     </div>
                     <h3>Digital Marketing</h3>
                     <p>Data-driven strategies to increase your online visibility, engagement, and conversion rates.</p>
+                    <a href="services.html#digital-marketing" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="500">
@@ -103,6 +215,7 @@
                     </div>
                     <h3>Cloud Solutions</h3>
                     <p>Secure and scalable cloud infrastructure to support your business growth and digital transformation.</p>
+                    <a href="services.html#cloud-solutions" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="600">
@@ -111,6 +224,7 @@
                     </div>
                     <h3>Cyber Security</h3>
                     <p>Comprehensive protection for your digital assets against evolving threats and vulnerabilities.</p>
+                    <a href="services.html#cyber-security" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card" data-aos="fade-up" data-aos-delay="700">
@@ -119,7 +233,12 @@
                     </div>
                     <h3>AI & Automation</h3>
                     <p>Intelligent solutions that streamline operations, reduce costs, and unlock new opportunities.</p>
+                    <a href="services.html#ai-automation" class="service-link">Learn More →</a>
                 </div>
+            </div>
+            
+            <div class="services-cta" data-aos="fade-up">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
             </div>
         </div>
     </section>
@@ -148,6 +267,10 @@
                             <div class="stat-number" data-count="15">0</div>
                             <div class="stat-label">Awards Won</div>
                         </div>
+                    </div>
+                    
+                    <div class="about-cta" data-aos="fade-up">
+                        <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
                     </div>
                 </div>
                 
@@ -200,6 +323,10 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="testimonials-cta" data-aos="fade-up">
+                <a href="testimonials.html" class="btn btn-primary">Read More Testimonials</a>
+            </div>
         </div>
     </section>
 
@@ -229,7 +356,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Phone</h4>
-                            <p>+254711693981</p>
+                            <p>+254711603981</p>
                             <p>+971586342099</p>
                         </div>
                     </div>
@@ -289,22 +416,22 @@
                 <div class="footer-links">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h3 class="footer-heading">Services</h3>
                     <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">App Development</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Cloud Solutions</a></li>
-                        <li><a href="#">Cyber Security</a></li>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">App Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="services.html">Cloud Solutions</a></li>
+                        <li><a href="services.html">Cyber Security</a></li>
                     </ul>
                 </div>
                 
@@ -312,7 +439,7 @@
                     <h3 class="footer-heading">Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 445 00100 Nairobi, Kenya</li>
-                        <li><i class="fas fa-phone"></i> +254711693981</li>
+                        <li><i class="fas fa-phone"></i> +254711603981</li>
                         <li><i class="fas fa-phone"></i> +971586342099</li>
                         <li><i class="fas fa-envelope"></i> smartechn@info.co.ke</li>
                         <li><i class="fas fa-globe"></i> www.smartechn.co.ke</li>
@@ -327,7 +454,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/254711693981" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/254711603981" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
     <!-- Back to Top Button -->
