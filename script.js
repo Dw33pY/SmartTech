@@ -1,3 +1,198 @@
+// 🔢 IMPROVED Counter Animation
+function initCounterAnimation() {
+    const counters = document.querySelectorAll('.stat-number');
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-count');
+                const duration = 2000;
+                let start = 0;
+                const increment = target / (duration / 16);
+                
+                const updateCounter = () => {
+                    start += increment;
+                    if (start < target) {
+                        counter.textContent = Math.ceil(start);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5, rootMargin: '0px 0px -50px 0px' });
+
+    counters.forEach(counter => {
+        counter.textContent = '0';
+        observer.observe(counter);
+    });
+}
+
+// 🎯 IMPROVED Stats Counter for About Page
+function initStoryStats() {
+    const storyStats = document.querySelectorAll('.story-stat .stat-number');
+    if (!storyStats.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const stat = entry.target;
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 1500;
+                let start = 0;
+                const increment = target / (duration / 16);
+                
+                const updateStat = () => {
+                    start += increment;
+                    if (start < target) {
+                        stat.textContent = Math.ceil(start);
+                        requestAnimationFrame(updateStat);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                
+                updateStat();
+                observer.unobserve(stat);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    storyStats.forEach(stat => {
+        observer.observe(stat);
+    });
+}
+
+// 🎯 IMPROVED Stats Counter for Testimonials Page
+function initTestimonialsStats() {
+    const testimonialsStats = document.querySelectorAll('.testimonials-stats .stat-number');
+    if (!testimonialsStats.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const stat = entry.target;
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 1500;
+                let start = 0;
+                const increment = target / (duration / 16);
+                
+                const updateStat = () => {
+                    start += increment;
+                    if (start < target) {
+                        stat.textContent = Math.ceil(start);
+                        requestAnimationFrame(updateStat);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                
+                updateStat();
+                observer.unobserve(stat);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    testimonialsStats.forEach(stat => {
+        observer.observe(stat);
+    });
+}
+
+// 🌀 Fixed Circular Carousel Functionality
+function initCircularCarousel() {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    
+    if (!carouselItems.length) return;
+
+    let currentIndex = 0;
+    let autoRotateInterval;
+
+    function updateCarousel(index) {
+        // Remove active class from all items and indicators
+        carouselItems.forEach(item => item.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current item and indicator
+        carouselItems[index].classList.add('active');
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+        
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % carouselItems.length;
+        updateCarousel(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+        updateCarousel(prevIndex);
+    }
+
+    // Next button
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+
+    // Previous button
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            updateCarousel(index);
+            resetAutoRotate();
+        });
+    });
+
+    // Carousel item clicks
+    carouselItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            updateCarousel(index);
+            resetAutoRotate();
+        });
+    });
+
+    function startAutoRotate() {
+        autoRotateInterval = setInterval(nextSlide, 3000);
+    }
+
+    function resetAutoRotate() {
+        clearInterval(autoRotateInterval);
+        startAutoRotate();
+    }
+
+    function stopAutoRotate() {
+        clearInterval(autoRotateInterval);
+    }
+
+    // Auto-rotate
+    startAutoRotate();
+
+    // Pause auto-rotate on hover
+    const carouselContainer = document.querySelector('.circular-carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoRotate);
+        carouselContainer.addEventListener('mouseleave', startAutoRotate);
+    }
+
+    // Initialize first item
+    updateCarousel(0);
+}
+
 // 🚀 EPIC Tech Loading Screen
 document.addEventListener('DOMContentLoaded', function() {
     // Create epic loading screen
@@ -51,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
         
-        // Back to top button visibility - Use existing button from HTML
+        // Back to top button visibility
         const backToTop = document.getElementById('backToTop');
         if (backToTop) {
             if (currentScroll > 500) {
@@ -75,14 +270,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close mobile menu when clicking on a link - FIXED
+    // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             
             // Only prevent default for anchor links, not home reload
-            if (targetId.startsWith('#') && targetId !== '#home') {
+            if (targetId && targetId.startsWith('#') && targetId !== '#home') {
                 e.preventDefault();
                 
                 const targetElement = document.querySelector(targetId);
@@ -111,42 +306,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     navMenu.classList.remove('active');
                     body.style.overflow = '';
                 }
-                // Let the onclick handler handle the home reload
             }
         });
     });
     
-    // Counter animation
-    const counters = document.querySelectorAll('.stat-number');
-    const speed = 200;
+    // Initialize counter animations
+    initStoryStats();
+    initTestimonialsStats();
+    initCounterAnimation();
     
-    const startCounter = (counter) => {
-        const target = +counter.getAttribute('data-count');
-        const count = +counter.innerText;
-        
-        const inc = target / speed;
-        
-        if (count < target) {
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(() => startCounter(counter), 20);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    
-    // Initialize counter when element is in viewport
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startCounter(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
+    // Initialize circular carousel
+    initCircularCarousel();
     
     // Form submission with validation
     const contactForm = document.getElementById('contactForm');
@@ -182,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Initialize particles.js if available
-    if (typeof particlesJS !== 'undefined') {
+    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
         particlesJS('particles-js', {
             particles: {
                 number: {
@@ -258,9 +428,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', scrollToTop);
     }
+
+    // Initialize FAQ functionality
+    initFAQ();
+
+    // Fix mobile overflow
+    fixMobileOverflow();
 });
 
-// 🎯 Back to Top Functionality - FIXED
+// 🎯 Back to Top Functionality
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -268,19 +444,16 @@ function scrollToTop() {
     });
 }
 
-// 🏠 Home Reload Function - IMPROVED
+// 🏠 Home Reload Function
 function reloadHome(event) {
-    // If we're already on home page and at top, do nothing
     if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
         const currentScroll = window.pageYOffset;
         if (currentScroll > 0) {
-            // Scroll to top instead of reloading
             event.preventDefault();
             scrollToTop();
             return false;
         }
     }
-    // Allow normal navigation for home link
     return true;
 }
 
@@ -341,51 +514,39 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Add notification styles only once
-if (!document.querySelector('style[data-notification]')) {
-    const notificationStyles = document.createElement('style');
-    notificationStyles.setAttribute('data-notification', 'true');
-    notificationStyles.textContent = `
-        .notification {
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            background: white;
-            padding: 20px 25px;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            border-left: 4px solid var(--primary);
-            transform: translateX(400px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 10000;
-            max-width: 350px;
-        }
-        
-        .notification.show {
-            transform: translateX(0);
-        }
-        
-        .notification-success {
-            border-left-color: var(--success);
-        }
-        
-        .notification-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-        
-        .notification-content i {
-            font-size: 20px;
-        }
-        
-        .notification-success .notification-content i {
-            color: var(--success);
-        }
-    `;
-    document.head.appendChild(notificationStyles);
+// ❓ FAQ Functionality
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// 🛠️ FIX: Mobile Overflow Prevention
+function fixMobileOverflow() {
+    // Prevent zoom on input focus for iOS
+    document.addEventListener('touchstart', function() {}, {passive: true});
+    
+    // Fix viewport height for mobile
+    function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', setVH);
 }
 
 // 🎮 Easter Eggs
@@ -493,73 +654,9 @@ We're excited to have you here!
 • Epic tech loading experience  
 • Professional responsive design
 • Cutting-edge digital solutions
+• Modern circular carousel
+• Beautiful artistic effects
 
 Press 's' for snow or 't' for tech effects! 🎮
 
 `, 'font-size: 18px; font-weight: bold; color: #2563eb;', 'font-size: 14px; color: #64748b;');
-
-// 🛠️ FIX: Mobile Overflow Prevention
-function fixMobileOverflow() {
-    // Prevent zoom on input focus for iOS
-    document.addEventListener('touchstart', function() {}, {passive: true});
-    
-    // Fix viewport height for mobile
-    function setVH() {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    
-    setVH();
-    window.addEventListener('resize', setVH);
-    window.addEventListener('orientationchange', setVH);
-}
-
-// Call this function in your DOMContentLoaded event
-document.addEventListener('DOMContentLoaded', function() {
-    fixMobileOverflow();
-    
-    // Your existing loading screen and other code...
-    // FAQ functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // FAQ toggle functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
-    });
-
-    // Enhanced form handling for contact page
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Add loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                // Success animation
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                
-                // Reset form
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    
-                    // Show success message
-                    showNotification('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
-                }, 2000);
-            }, 2000);
-        });
-    }
-});
