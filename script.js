@@ -79,6 +79,7 @@ function initTestimonialsStats() {
             if (entry.isIntersecting) {
                 const stat = entry.target;
                 const target = parseInt(stat.getAttribute('data-count'));
+                const suffix = stat.getAttribute('data-suffix') || ''; // Get suffix if exists
                 const duration = 1500;
                 let start = 0;
                 const increment = target / (duration / 16);
@@ -86,10 +87,10 @@ function initTestimonialsStats() {
                 const updateStat = () => {
                     start += increment;
                     if (start < target) {
-                        stat.textContent = Math.ceil(start);
+                        stat.textContent = Math.ceil(start) + suffix;
                         requestAnimationFrame(updateStat);
                     } else {
-                        stat.textContent = target;
+                        stat.textContent = target + suffix;
                     }
                 };
                 
