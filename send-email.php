@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPAuth = true;
         $mail->Username = 'infor@smartechn.co.ke';
         $mail->Password = 'Drq3hVeP1fpH'; // Your App Password
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
         
         // Sender & Recipient
         $mail->setFrom('infor@smartechn.co.ke', 'SmartTechn Website');
