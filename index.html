@@ -16,6 +16,9 @@
     <meta property="og:title" content="Smartechn - Leading the New Digital World">
     <meta property="og:description" content="Professional web development, app development, digital marketing, cloud solutions, and cyber security services in Nairobi, Kenya">
     <meta property="og:image" content="https://smartechn.co.ke/android-chrome-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://smartechn.co.ke">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Smartechn">
@@ -44,7 +47,29 @@
     <link rel="stylesheet" href="style.css">
     
     <!-- Google AdSense Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8171145980317053" crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8171145980317053" crossorigin="anonymous"></script> -->
+
+     <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization", 
+    "name": "Smartechn",
+    "url": "https://smartechn.co.ke",
+    "logo": "https://smartechn.co.ke/android-chrome-512x512.png",
+    "description": "Professional IT solutions and digital services in Nairobi, Kenya",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254711693981",
+        "contactType": "customer service"
+    }
+    }
+    </script>
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -63,6 +88,8 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="careers.html">Careers</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 
@@ -92,10 +119,9 @@
     </section>
 
     <!-- Ad Unit 1 - Before Digital Solutions Section -->
-    <section class="ad-section" data-aos="fade-up">
+    <!-- <section class="ad-section" data-aos="fade-up">
         <div class="container">
             <div class="ad-container">
-                <!-- Smartech - Auto Responsive -->
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-8171145980317053"
@@ -107,7 +133,7 @@
                 </script>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Modern Circular Carousel -->
     <section class="circular-carousel-section">
@@ -247,9 +273,8 @@
             </div>
             
             <!-- Ad Unit 2 - After Services Grid -->
-            <div class="ad-section" data-aos="fade-up">
+            <!-- <div class="ad-section" data-aos="fade-up">
                 <div class="ad-container">
-                    <!-- Fluid Layout Ad -->
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-format="fluid"
@@ -260,7 +285,7 @@
                          (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-            </div>
+            </div> -->
             
             <div class="services-cta" data-aos="fade-up">
                 <a href="services.html" class="btn btn-primary">View All Services</a>
@@ -350,9 +375,8 @@
             </div>
             
             <!-- Ad Unit 3 - After Testimonials -->
-            <div class="ad-section" data-aos="fade-up">
+            <!-- <div class="ad-section" data-aos="fade-up">
                 <div class="ad-container">
-                    <!-- Auto Relaxed Ad -->
                     <ins class="adsbygoogle"
                          style="display:block"
                          data-ad-format="autorelaxed"
@@ -363,7 +387,7 @@
                     </script>
                 </div>
             </div>
-            
+             -->
             <div class="testimonials-cta" data-aos="fade-up">
                 <a href="testimonials.html" class="btn btn-primary">Read More Testimonials</a>
             </div>
@@ -379,9 +403,8 @@
             </div>
             
             <!-- Ad Unit 4 - Before Contact Form -->
-            <div class="ad-section" data-aos="fade-up">
+            <!-- <div class="ad-section" data-aos="fade-up">
                 <div class="ad-container">
-                    <!-- In-Article Ad -->
                     <ins class="adsbygoogle"
                          style="display:block; text-align:center;"
                          data-ad-layout="in-article"
@@ -392,7 +415,7 @@
                          (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-            </div>
+            </div> -->
             
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right">
@@ -402,7 +425,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Location</h4>
-                            <p>445 00100 Nairobi, Kenya</p>
+                            <p style="color: black;">445 00100 Nairobi, Kenya</p>
                         </div>
                     </div>
                     
@@ -412,8 +435,8 @@
                         </div>
                         <div class="contact-text">
                             <h4>Phone</h4>
-                            <p>+254711693981</p>
-                            <p>+971586342099</p>
+                            <p style="color: black;">+254711693981</p>
+                            <p style="color: black;">+971586342099</p>
                         </div>
                     </div>
                     
@@ -423,13 +446,13 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <p>jobkwemoi12@gmail.com</p>
+                            <p style="color: black;">jobkwemoi12@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/jobkwemoi12@gmail.com" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                         </div>
@@ -476,6 +499,8 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>

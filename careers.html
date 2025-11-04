@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Smartechn | Join Our Team</title>
+    
+    <!-- Favicon & Meta Tags -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <meta property="og:title" content="Careers - Smartechn | Join Our Team">
+    <meta property="og:description" content="Join Smartechn's innovative team. Explore career opportunities in web development, app development, and digital marketing in Nairobi, Kenya">
+    <meta property="og:image" content="https://smartechn.co.ke/android-chrome-512x512.png">
+    <meta property="og:url" content="https://smartechn.co.ke/careers">
+    
+    <meta name="description" content="Join Smartechn's innovative team. Career opportunities in IT, web development, app development, and digital marketing in Nairobi, Kenya">
+    
+    <!-- Styles & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-img">
+                    <img src="logo.png" alt="Smartechn Logo">
+                </div>
+                SMARTECHN
+            </a>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="careers.html" class="active">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <button class="nav-cta" onclick="location.href='contact.html'">Get Started</button>
+            </div>
+            
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Join Our <span class="gradient-text">Team</span></h1>
+                <p>Be part of an innovative company that's shaping the future of digital solutions in Africa</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p style="color: black;">Team Members</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p style="color: black;">Projects Delivered</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p style="color: black;">Countries Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="why-join-us">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Join Smartechn?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Career Growth</h3>
+                    <p>Continuous learning opportunities and clear career progression paths</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Great Team</h3>
+                    <p>Work with talented, passionate professionals in a collaborative environment</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Latest Tech</h3>
+                    <p>Access to cutting-edge technologies and tools for professional development</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Flexible working hours and remote work options for better work-life balance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="open-positions">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Open Positions</h2>
+            <div class="positions-filter">
+                <button class="filter-btn active" data-department="all" style="color: black;">All Departments</button>
+                <button class="filter-btn" data-department="development" style="color: black;">Development</button>
+                <button class="filter-btn" data-department="design" style="color: black;">Design</button>
+                <button class="filter-btn" data-department="marketing" style="color: black;">Marketing</button>
+            </div>
+            <div class="positions-grid" id="positionsGrid">
+                <!-- Positions loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="application-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Application form loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Culture Section -->
+    <section class="company-culture">
+        <div class="container">
+            <div class="culture-content">
+                <div class="culture-text" data-aos="fade-right">
+                    <h2>Our Culture</h2>
+                    <p>At Smartechn, we foster an environment of innovation, collaboration, and continuous learning. We believe in empowering our team members to do their best work while maintaining a healthy work-life balance.</p>
+                    <div class="culture-features">
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovation & Creativity</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>Collaboration</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Continuous Learning</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="culture-image" data-aos="fade-left">
+                    <img src="images/team-culture.jpg" alt="Smartechn Team Culture" onerror="this.src='https://via.placeholder.com/500x400/667eea/white?text=Team+Culture'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-img">
+                            <img src="logo.png">
+                        </div>
+                        SMARTECHN
+                    </div>
+                    <p>Leading the new digital world with innovative solutions that transform businesses and drive growth in the digital age.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61582630612652" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href=" https://x.com/smartechke?t=bC5HGwhhFXxJbqykqb4TcA&s=09" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/smartechnke?igsh=MXhsb3Q5ZmhtMDhieg==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">App Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="services.html">Cloud Solutions</a></li>
+                        <li><a href="services.html">Cyber Security</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 445 00100 Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254711693981</li>
+                        <li><i class="fas fa-phone"></i> +971586342099</li>
+                        <li><i class="fas fa-envelope"></i>jobkwemoi12@gmail.com</li>
+                        <li><i class="fas fa-globe"></i>smartechn.co.ke</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smartechn. All Rights Reserved. | Leading the New Digital World</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="careers.js"></script>
+</body>
+</html>

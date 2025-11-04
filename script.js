@@ -201,40 +201,57 @@
     // 🚀 LOADING SYSTEM
     // =============================================
 
-    function createLoadingScreen() {
-        const loadingScreen = document.createElement('div');
-        loadingScreen.id = 'loading';
-        loadingScreen.className = 'loading';
-        loadingScreen.innerHTML = `
-            <div class="loader-container">
-                <div class="tech-loader">
-                    <div class="tech-loader-inner"></div>
-                </div>
-                <div class="loading-text">INITIALIZING SMARTECHN SYSTEMS</div>
-                <div class="loading-dots">
-                    <div class="loading-dot"></div>
-                    <div class="loading-dot"></div>
-                    <div class="loading-dot"></div>
-                </div>
-                <div class="loading-progress">
-                    <div class="loading-progress-bar"></div>
-                </div>
+    // 🚀 FIXED Loading System
+function createLoadingScreen() {
+    // Only create loading screen if it doesn't exist
+    if (document.getElementById('loading')) return;
+    
+    const loadingScreen = document.createElement('div');
+    loadingScreen.id = 'loading';
+    loadingScreen.className = 'loading';
+    loadingScreen.innerHTML = `
+        <div class="loader-container">
+            <div class="tech-loader">
+                <div class="tech-loader-inner"></div>
             </div>
-        `;
-        
-        document.body.prepend(loadingScreen);
+            <div class="loading-text">INITIALIZING SMARTECHN SYSTEMS</div>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+        </div>
+    `;
+    
+    document.body.prepend(loadingScreen);
 
-        // Remove loading screen after page loads
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loading = $('#loading');
-                if (loading) {
-                    loading.classList.add('hidden');
-                    setTimeout(() => loading.remove(), 800);
-                }
-            }, 1500);
-        });
-    }
+    // Remove loading screen when page is fully loaded
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.classList.add('hidden');
+                setTimeout(() => {
+                    if (loading.parentNode) {
+                        loading.remove();
+                    }
+                }, 800);
+            }
+        }, 1500);
+    });
+
+    // Fallback: remove loading screen after 5 seconds max
+    setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading && loading.parentNode) {
+            loading.classList.add('hidden');
+            setTimeout(() => loading.remove(), 800);
+        }
+    }, 5000);
+}
 
     // =============================================
     // 📧 NOTIFICATION SYSTEM
@@ -632,3 +649,14 @@ Press 's' for snow or 't' for tech effects! 🎮
 `, 'font-size: 18px; font-weight: bold; color: #2563eb;', 'font-size: 14px; color: #64748b;');
 
 })();
+
+//URL TEMP FIX
+// Temporary fix for clean URLs - remove when .htaccess works
+function fixUrls() {
+    if (window.location.pathname.endsWith('.html')) {
+        const cleanUrl = window.location.pathname.replace(/\.html$/, '');
+        window.history.replaceState(null, null, cleanUrl);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fixUrls);
