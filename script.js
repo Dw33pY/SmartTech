@@ -652,11 +652,11 @@ Press 's' for snow or 't' for tech effects! 🎮
 
 //URL TEMP FIX
 // Temporary fix for clean URLs - remove when .htaccess works
-// function fixUrls() {
-//     if (window.location.pathname.endsWith('.html')) {
-//         const cleanUrl = window.location.pathname.replace(/\.html$/, '');
-//         window.history.replaceState(null, null, cleanUrl);
-//     }
-// }
+function fixUrls() {
+    if (window.location.pathname.endsWith('.html')) {
+        const cleanUrl = window.location.pathname.replace(/\.html$/, '');
+        window.history.replaceState(null, null, cleanUrl);
+    }
+}
 
-// document.addEventListener('DOMContentLoaded', fixUrls);
+document.addEventListener('DOMContentLoaded', fixUrls);
