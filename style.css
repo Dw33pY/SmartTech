@@ -67,7 +67,15 @@ header {
 header.scrolled {
     padding: 12px 0;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.086);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 .nav-container {
@@ -2954,7 +2962,7 @@ footer {
 
 /* Projects Page Styles */
 .projects-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #7983f7 0%, #207ea9 100%);
     color: white;
     padding: 120px 0 80px;
     text-align: center;
@@ -3149,7 +3157,7 @@ footer {
 }
 
 .projects-cta {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #1b3fce 0%, #57c0f5 100%);
     color: white;
     padding: 80px 0;
     text-align: center;

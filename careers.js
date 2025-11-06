@@ -1,5 +1,6 @@
-// Careers Data
+// Careers Data - MERGED with new positions
 const positionsData = [
+    // Your existing positions
     {
         id: 1,
         title: "Senior Frontend Developer",
@@ -8,6 +9,7 @@ const positionsData = [
         location: "Nairobi, Kenya",
         experience: "3+ years",
         description: "We are looking for an experienced Frontend Developer to join our team and help build amazing user interfaces for our clients.",
+        image: "images/careers/frontend-dev.jpg",
         responsibilities: [
             "Develop responsive web applications using modern JavaScript frameworks",
             "Collaborate with designers to implement pixel-perfect UI",
@@ -30,6 +32,7 @@ const positionsData = [
         location: "Nairobi, Kenya",
         experience: "2+ years",
         description: "Join our design team to create beautiful and intuitive user experiences for web and mobile applications.",
+        image: "images/careers/ui-ux-designer.jpg",
         responsibilities: [
             "Create wireframes, prototypes, and high-fidelity designs",
             "Conduct user research and usability testing",
@@ -52,6 +55,7 @@ const positionsData = [
         location: "Nairobi, Kenya",
         experience: "2+ years",
         description: "Help our clients grow their online presence through effective digital marketing strategies.",
+        image: "images/careers/digital-marketing.jpg",
         responsibilities: [
             "Develop and execute digital marketing campaigns",
             "Manage social media accounts and content creation",
@@ -74,6 +78,7 @@ const positionsData = [
         location: "Nairobi, Kenya",
         experience: "2+ years",
         description: "Build robust and scalable backend systems to power our applications and services.",
+        image: "images/careers/backend-dev.jpg",
         responsibilities: [
             "Develop and maintain server-side applications",
             "Design and implement RESTful APIs",
@@ -96,6 +101,7 @@ const positionsData = [
         location: "Nairobi, Kenya",
         experience: "2+ years",
         description: "Create cross-platform mobile applications that provide exceptional user experiences.",
+        image: "images/careers/mobile-dev.jpg",
         responsibilities: [
             "Develop mobile applications using React Native",
             "Collaborate with designers and backend developers",
@@ -109,6 +115,184 @@ const positionsData = [
             "Understanding of mobile UI/UX principles",
             "Familiarity with native mobile development is a plus"
         ]
+    },
+    // NEW OUTSOURCED POSITIONS
+    {
+        id: 6,
+        title: "Delivery Riders",
+        department: "outsourced",
+        type: "Contract",
+        location: "Nairobi, Kenya",
+        experience: "0-1 years",
+        description: "Join our partner delivery network. Flexible hours, competitive pay, and growth opportunities in the logistics sector.",
+        image: "images/careers/delivery-rider.jpg",
+        responsibilities: [
+            "Deliver packages and food orders to customers",
+            "Maintain delivery timelines and customer satisfaction",
+            "Handle cash and digital payments securely",
+            "Maintain delivery equipment and vehicle"
+        ],
+        requirements: [
+            "Valid driving license for motorcycle/bicycle",
+            "Smartphone with GPS capabilities",
+            "Good knowledge of Nairobi routes",
+            "Excellent customer service skills"
+        ]
+    },
+    {
+        id: 7,
+        title: "Taxi Drivers",
+        department: "outsourced",
+        type: "Contract",
+        location: "Nairobi, Kenya",
+        experience: "1+ years",
+        description: "Partner with our transportation network. Earn competitive rates with flexible scheduling and bonus opportunities.",
+        image: "images/careers/taxi-driver.jpg",
+        responsibilities: [
+            "Provide safe and reliable transportation services",
+            "Maintain vehicle cleanliness and maintenance",
+            "Follow traffic laws and safety regulations",
+            "Provide excellent customer service"
+        ],
+        requirements: [
+            "Valid driver's license and PSV badge",
+            "Clean driving record",
+            "Well-maintained vehicle",
+            "Knowledge of Nairobi and surrounding areas"
+        ]
+    },
+    {
+        id: 8,
+        title: "Warehouse Workers",
+        department: "outsourced",
+        type: "Full-time/Part-time",
+        location: "Nairobi, Kenya",
+        experience: "0-1 years",
+        description: "Join our logistics partners in warehouse operations. Opportunities for growth in supply chain management.",
+        image: "images/careers/warehouse-worker.jpg",
+        responsibilities: [
+            "Receive, sort, and store incoming shipments",
+            "Pick, pack, and prepare orders for shipment",
+            "Maintain inventory accuracy and organization",
+            "Operate warehouse equipment safely"
+        ],
+        requirements: [
+            "Ability to lift heavy objects (25+ kg)",
+            "Attention to detail and accuracy",
+            "Basic math and reading skills",
+            "Reliable and punctual"
+        ]
+    },
+    {
+        id: 9,
+        title: "Packagers & Assemblers",
+        department: "outsourced",
+        type: "Full-time/Part-time",
+        location: "Nairobi, Kenya",
+        experience: "0-1 years",
+        description: "Work with our manufacturing and distribution partners in packaging and product assembly.",
+        image: "images/careers/packager.jpg",
+        responsibilities: [
+            "Assemble products according to specifications",
+            "Package finished goods for shipment",
+            "Quality control and inspection",
+            "Maintain clean and organized work area"
+        ],
+        requirements: [
+            "Good hand-eye coordination",
+            "Attention to detail",
+            "Ability to follow instructions",
+            "Basic quality control understanding"
+        ]
+    },
+    {
+        id: 10,
+        title: "Housekeeping Staff",
+        department: "outsourced",
+        type: "Full-time/Part-time",
+        location: "Nairobi, Kenya",
+        experience: "0-1 years",
+        description: "Join our partner hospitality companies. Maintain cleanliness and provide excellent service in various facilities.",
+        image: "images/careers/housekeeping.jpg",
+        responsibilities: [
+            "Clean and maintain assigned areas",
+            "Restock supplies and amenities",
+            "Follow cleaning protocols and standards",
+            "Report maintenance issues"
+        ],
+        requirements: [
+            "Attention to detail and cleanliness",
+            "Physical stamina for standing and moving",
+            "Reliable and trustworthy",
+            "Good time management skills"
+        ]
+    },
+    {
+        id: 11,
+        title: "Waiters & Service Staff",
+        department: "outsourced",
+        type: "Full-time/Part-time",
+        location: "Nairobi, Kenya",
+        experience: "0-1 years",
+        description: "Work with our partner restaurants and hospitality establishments. Develop customer service skills in dynamic environments.",
+        image: "images/careers/waiter.jpg",
+        responsibilities: [
+            "Take customer orders and serve food/drinks",
+            "Provide excellent customer service",
+            "Maintain clean dining areas",
+            "Handle cash and card payments"
+        ],
+        requirements: [
+            "Excellent communication skills",
+            "Friendly and outgoing personality",
+            "Ability to work in fast-paced environment",
+            "Basic math skills"
+        ]
+    },
+    // INTERNSHIPS & ATTACHMENTS
+    {
+        id: 12,
+        title: "IT Intern/Attachee",
+        department: "development",
+        type: "Internship",
+        location: "Nairobi, Kenya",
+        experience: "Students/Fresh Graduates",
+        description: "Gain hands-on experience in web development, software engineering, and IT infrastructure. Perfect for students and recent graduates.",
+        image: "images/careers/it-intern.jpg",
+        responsibilities: [
+            "Assist in website and application development",
+            "Learn and apply programming languages",
+            "Participate in team projects and meetings",
+            "Document code and processes"
+        ],
+        requirements: [
+            "Currently pursuing IT/Computer Science degree",
+            "Basic knowledge of programming concepts",
+            "Eagerness to learn new technologies",
+            "Good problem-solving skills"
+        ]
+    },
+    {
+        id: 13,
+        title: "Digital Marketing Intern",
+        department: "marketing",
+        type: "Internship",
+        location: "Nairobi, Kenya",
+        experience: "Students/Fresh Graduates",
+        description: "Learn digital marketing strategies, social media management, and content creation in a real-world environment.",
+        image: "images/careers/marketing-intern.jpg",
+        responsibilities: [
+            "Assist in social media content creation",
+            "Learn SEO and content marketing strategies",
+            "Help analyze marketing campaign performance",
+            "Participate in brainstorming sessions"
+        ],
+        requirements: [
+            "Interest in digital marketing and social media",
+            "Good writing and communication skills",
+            "Familiarity with major social media platforms",
+            "Creative thinking and enthusiasm"
+        ]
     }
 ];
 
@@ -119,7 +303,7 @@ function initCareers() {
     setupApplicationModal();
 }
 
-// Render Positions
+// Render Positions - UPDATED with images
 function renderPositions(department = 'all') {
     const grid = document.getElementById('positionsGrid');
     if (!grid) return;
@@ -130,30 +314,36 @@ function renderPositions(department = 'all') {
 
     grid.innerHTML = filteredPositions.map(position => `
         <div class="position-card" data-aos="fade-up">
-            <div class="position-header">
-                <div>
-                    <h3 class="position-title">${position.title}</h3>
-                    <span class="position-department">${position.department}</span>
-                </div>
+            <div class="position-image">
+                <img src="${position.image}" alt="${position.title}" 
+                     onerror="this.src='https://via.placeholder.com/400x200/667eea/white?text=${encodeURIComponent(position.title)}'">
             </div>
-            <div class="position-meta">
-                <div class="meta-item">
-                    <i class="fas fa-briefcase"></i>
-                    <span>${position.type}</span>
+            <div class="position-content">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">${position.title}</h3>
+                        <span class="position-department ${position.department}">${position.department}</span>
+                    </div>
                 </div>
-                <div class="meta-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>${position.location}</span>
+                <div class="position-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>${position.type}</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>${position.location}</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>${position.experience}</span>
+                    </div>
                 </div>
-                <div class="meta-item">
-                    <i class="fas fa-chart-line"></i>
-                    <span>${position.experience} experience</span>
+                <p class="position-description">${position.description}</p>
+                <div class="position-actions">
+                    <a href="#" class="apply-btn" data-position="${position.id}">Apply Now</a>
+                    <a href="#" class="details-btn" data-position="${position.id}">View Details</a>
                 </div>
-            </div>
-            <p class="position-description">${position.description}</p>
-            <div class="position-actions">
-                <a href="#" class="apply-btn" data-position="${position.id}">Apply Now</a>
-                <a href="#" class="details-btn" data-position="${position.id}">View Details</a>
             </div>
         </div>
     `).join('');
@@ -176,7 +366,7 @@ function renderPositions(department = 'all') {
     });
 }
 
-// Setup Position Filters
+// Setup Position Filters - UPDATED with new department
 function setupPositionFilters() {
     const filterBtns = document.querySelectorAll('.positions-filter .filter-btn');
     filterBtns.forEach(btn => {
@@ -192,14 +382,90 @@ function setupPositionFilters() {
     });
 }
 
+// Add this CSS for the images
+const positionImageStyles = `
+.position-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.position-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.position-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.position-card:hover .position-image img {
+    transform: scale(1.05);
+}
+
+.position-content {
+    padding: 25px;
+}
+
+.position-department {
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.position-department.development {
+    background: #e6fffa;
+    color: #234e52;
+}
+
+.position-department.design {
+    background: #faf5ff;
+    color: #553c9a;
+}
+
+.position-department.marketing {
+    background: #fff5f5;
+    color: #c53030;
+}
+
+.position-department.outsourced {
+    background: #f0fff4;
+    color: #22543d;
+}
+`;
+
+// Add the CSS to the page
+const styleSheet = document.createElement('style');
+styleSheet.textContent = positionImageStyles;
+document.head.appendChild(styleSheet);
+
+// KEEP ALL YOUR EXISTING FUNCTIONS BELOW (setupApplicationModal, openApplicationModal, showPositionDetails, handleApplicationSubmit)
 // Setup Application Modal
 function setupApplicationModal() {
     const modal = document.getElementById('applicationModal');
+    if (!modal) return;
+    
     const closeBtn = modal.querySelector('.close-modal');
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
 
     // Close modal when clicking outside
     window.addEventListener('click', (e) => {
@@ -227,10 +493,14 @@ function openApplicationModal(positionId) {
     modalBody.innerHTML = `
         <div class="application-form">
             <h2>Apply for ${position.title}</h2>
-            <form id="jobApplicationForm">
+            <form id="jobApplicationForm" action="https://formsubmit.co/el/yadasu" method="POST">
+                <input type="hidden" name="_subject" value="New Job Application: ${position.title}">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <input type="text" id="fullName" name="name" required>
                 </div>
                 
                 <div class="form-group">
@@ -256,7 +526,7 @@ function openApplicationModal(positionId) {
                 
                 <div class="form-group">
                     <label for="coverLetter">Cover Letter *</label>
-                    <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Tell us why you're interested in this position and what makes you a good fit..." required></textarea>
+                    <textarea id="coverLetter" name="message" rows="5" placeholder="Tell us why you're interested in this position and what makes you a good fit..." required></textarea>
                 </div>
                 
                 <div class="form-group">
@@ -264,13 +534,8 @@ function openApplicationModal(positionId) {
                     <div class="file-upload" id="resumeUpload">
                         <i class="fas fa-cloud-upload-alt"></i>
                         <p>Click to upload your resume (PDF, DOC, DOCX)</p>
-                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" style="display: none;" required>
+                        <input type="file" id="resume" name="attachment" accept=".pdf,.doc,.docx" style="display: none;" required>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>Portfolio/LinkedIn (Optional)</label>
-                    <input type="url" id="portfolio" name="portfolio" placeholder="https://">
                 </div>
                 
                 <input type="hidden" name="position" value="${position.title}">
@@ -286,22 +551,20 @@ function openApplicationModal(positionId) {
     const fileUpload = document.getElementById('resumeUpload');
     const fileInput = document.getElementById('resume');
 
-    fileUpload.addEventListener('click', () => {
-        fileInput.click();
-    });
+    if (fileUpload && fileInput) {
+        fileUpload.addEventListener('click', () => {
+            fileInput.click();
+        });
 
-    fileInput.addEventListener('change', (e) => {
-        if (e.target.files.length > 0) {
-            fileUpload.innerHTML = `
-                <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                <p>${e.target.files[0].name}</p>
-            `;
-        }
-    });
-
-    // Handle form submission
-    const form = document.getElementById('jobApplicationForm');
-    form.addEventListener('submit', handleApplicationSubmit);
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                fileUpload.innerHTML = `
+                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                    <p>${e.target.files[0].name}</p>
+                `;
+            }
+        });
+    }
 
     modal.style.display = 'block';
 }
@@ -318,7 +581,7 @@ function showPositionDetails(positionId) {
         <div class="position-details">
             <h2>${position.title}</h2>
             <div class="position-meta">
-                <span class="position-department">${position.department}</span>
+                <span class="position-department ${position.department}">${position.department}</span>
                 <div class="meta-item">
                     <i class="fas fa-briefcase"></i>
                     <span>${position.type}</span>
@@ -329,7 +592,7 @@ function showPositionDetails(positionId) {
                 </div>
                 <div class="meta-item">
                     <i class="fas fa-chart-line"></i>
-                    <span>${position.experience} experience</span>
+                    <span>${position.experience}</span>
                 </div>
             </div>
             
@@ -377,32 +640,25 @@ function handleApplicationSubmit(e) {
     e.preventDefault();
     
     const form = e.target;
-    const formData = new FormData(form);
     const submitBtn = form.querySelector('.submit-application');
     
     // Show loading state
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
     submitBtn.disabled = true;
     
-    // Simulate API call (replace with actual form submission)
+    // FormSubmit will handle the actual submission
+    // This is just for visual feedback
     setTimeout(() => {
-        // Success state
         submitBtn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
         submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
         
-        // Close modal after success
         setTimeout(() => {
             document.getElementById('applicationModal').style.display = 'none';
-            
-            // Show success notification
             if (typeof showNotification !== 'undefined') {
                 showNotification('Application submitted successfully! We\'ll get back to you soon.', 'success');
             }
-            
-            // Reset form
-            form.reset();
         }, 2000);
-    }, 2000);
+    }, 1500);
 }
 
 // Initialize when DOM is loaded
