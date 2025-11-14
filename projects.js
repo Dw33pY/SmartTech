@@ -9,8 +9,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
         technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
         features: ["Shopping Cart", "Payment Processing", "Inventory Management", "Admin Dashboard"],
-        liveUrl: "#",
-        githubUrl: "#"
+        // liveUrl: "#",
+        // githubUrl: "#"
     },
     {
         id: 2,
@@ -21,8 +21,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
         technologies: ["React Native", "Firebase", "Node.js", "MySQL"],
         features: ["Biometric Login", "Fund Transfer", "Bill Payments", "Transaction History"],
-        liveUrl: "#",
-        githubUrl: null
+        // liveUrl: "#",
+        // githubUrl: null
     },
     {
         id: 3,
@@ -33,8 +33,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
         technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
         features: ["CMS", "Multilingual", "SEO Optimized", "Analytics"],
-        liveUrl: "#",
-        githubUrl: "#"
+        // liveUrl: "#",
+        // githubUrl: "#"
     },
     {
         id: 4,
@@ -45,8 +45,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=250&fit=crop",
         technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
         features: ["Real-time Tracking", "Multiple Payments", "Restaurant Dashboard", "Order Management"],
-        liveUrl: "#",
-        githubUrl: null
+        // liveUrl: "#",
+        // githubUrl: null
     },
     {
         id: 5,
@@ -57,8 +57,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop",
         technologies: ["React", "Django", "PostgreSQL", "Docker"],
         features: ["Course Management", "Progress Tracking", "Assessments", "Video Streaming"],
-        liveUrl: "#",
-        githubUrl: "#"
+        // liveUrl: "#",
+        // githubUrl: "#"
     },
     {
         id: 6,
@@ -69,8 +69,8 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=250&fit=crop",
         technologies: ["Angular", "Spring Boot", "PostgreSQL", "Azure"],
         features: ["Patient Management", "Appointment Scheduling", "EHR", "Billing System"],
-        liveUrl: "#",
-        githubUrl: "#"
+        // liveUrl: "#",
+        // githubUrl: "#"
     }
 ];
 
