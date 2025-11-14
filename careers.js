@@ -635,30 +635,66 @@ function showPositionDetails(positionId) {
     modal.style.display = 'block';
 }
 
-// Handle Application Form Submission
+// Handle Application Form Submission - UPDATED FOR FORMSPREE
 function handleApplicationSubmit(e) {
     e.preventDefault();
     
     const form = e.target;
     const submitBtn = form.querySelector('.submit-application');
+    const originalText = submitBtn.innerHTML;
     
     // Show loading state
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
     submitBtn.disabled = true;
     
-    // FormSubmit will handle the actual submission
-    // This is just for visual feedback
-    setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
-        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-        
-        setTimeout(() => {
-            document.getElementById('applicationModal').style.display = 'none';
+    // Submit to Formspree
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
+            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            
+            // Show success notification
             if (typeof showNotification !== 'undefined') {
                 showNotification('Application submitted successfully! We\'ll get back to you soon.', 'success');
             }
-        }, 2000);
-    }, 1500);
+            
+            // Close modal and reset form
+            setTimeout(() => {
+                document.getElementById('applicationModal').style.display = 'none';
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.background = '';
+            }, 3000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    })
+    .catch(error => {
+        // Error handling
+        submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Submit';
+        submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        
+        if (typeof showNotification !== 'undefined') {
+            showNotification('Failed to submit application. Please try again or contact us directly.', 'error');
+        }
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+        }, 3000);
+    });
 }
 
 // Initialize when DOM is loaded

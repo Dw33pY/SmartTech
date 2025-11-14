@@ -309,7 +309,7 @@
                         </div>
                         
                         <div class="stat" data-aos="fade-up" data-aos-delay="300">
-                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-number" data-count="98" data-suffix="%">0%</div>
                             <div class="stat-label">Client Satisfaction</div>
                         </div>
                         
@@ -320,7 +320,7 @@
                     </div>
                     
                     <div class="about-cta" data-aos="fade-up">
-                        <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                        <a href="about.html" class="btn btn-secondary" style="background-color: blue;">Learn More About Us</a>
                     </div>
                 </div>
                 
@@ -452,20 +452,25 @@
                 </div>
                 
                 <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm" action="https://formsubmit.co/el/yadasu" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xpwkagrz" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact from Smartechn Website">
+                        <input type="hidden" name="_replyto" value="jobkwemoi12@gmail.com">
+                        
                         <div class="form-group">
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                         
-                        <div class="form-group">
-                            <textarea id="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </form>
                 </div>
             </div>

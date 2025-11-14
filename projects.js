@@ -1,4 +1,4 @@
-// Projects Data
+// Projects Data with WORKING Placeholder Images
 const projectsData = [
     {
         id: 1,
@@ -6,11 +6,11 @@ const projectsData = [
         category: "ecommerce",
         description: "A modern e-commerce platform with advanced features and seamless user experience.",
         fullDescription: "We developed a comprehensive e-commerce solution that includes inventory management, payment integration, and customer relationship management. The platform handles over 10,000 products and processes hundreds of orders daily.",
-        image: "images/projects/ecommerce.jpg",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
         technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
         features: ["Shopping Cart", "Payment Processing", "Inventory Management", "Admin Dashboard"],
-        liveUrl: "https://example-ecommerce.com",
-        githubUrl: "https://github.com/smartechn/ecommerce"
+        liveUrl: "#",
+        githubUrl: "#"
     },
     {
         id: 2,
@@ -18,10 +18,10 @@ const projectsData = [
         category: "app",
         description: "Secure mobile banking application with biometric authentication.",
         fullDescription: "A feature-rich mobile banking application that allows users to manage their accounts, transfer funds, pay bills, and access financial services securely with biometric authentication.",
-        image: "images/projects/banking-app.jpg",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
         technologies: ["React Native", "Firebase", "Node.js", "MySQL"],
         features: ["Biometric Login", "Fund Transfer", "Bill Payments", "Transaction History"],
-        liveUrl: "https://play.google.com/store/apps/details?id=com.bankingapp",
+        liveUrl: "#",
         githubUrl: null
     },
     {
@@ -30,11 +30,11 @@ const projectsData = [
         category: "web",
         description: "Modern corporate website with CMS and multilingual support.",
         fullDescription: "A responsive corporate website built with a custom CMS that allows the client to easily update content, manage multiple languages, and track user engagement through integrated analytics.",
-        image: "images/projects/corporate-website.jpg",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
         technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
         features: ["CMS", "Multilingual", "SEO Optimized", "Analytics"],
-        liveUrl: "https://corporate-client.com",
-        githubUrl: "https://github.com/smartechn/corporate-website"
+        liveUrl: "#",
+        githubUrl: "#"
     },
     {
         id: 4,
@@ -42,63 +42,68 @@ const projectsData = [
         category: "app",
         description: "Food delivery application with real-time tracking and multiple payment options.",
         fullDescription: "A comprehensive food delivery platform connecting restaurants with customers. Features include real-time order tracking, multiple payment options, restaurant management dashboard, and delivery personnel tracking.",
-        image: "images/projects/food-delivery.jpg",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=250&fit=crop",
         technologies: ["Flutter", "Firebase", "Node.js", "MongoDB"],
         features: ["Real-time Tracking", "Multiple Payments", "Restaurant Dashboard", "Order Management"],
-        liveUrl: "https://play.google.com/store/apps/details?id=com.fooddelivery",
+        liveUrl: "#",
         githubUrl: null
     },
     {
         id: 5,
-        title: "Brand Identity Design",
-        category: "branding",
-        description: "Complete brand identity package including logo, guidelines, and marketing materials.",
-        fullDescription: "We created a comprehensive brand identity for a tech startup, including logo design, brand guidelines, business cards, letterheads, and digital marketing templates that reflect their innovative approach.",
-        image: "images/projects/branding.jpg",
-        technologies: ["Adobe Illustrator", "Photoshop", "InDesign"],
-        features: ["Logo Design", "Brand Guidelines", "Marketing Materials", "Social Media Kit"],
-        liveUrl: null,
-        githubUrl: null
-    },
-    {
-        id: 6,
         title: "Learning Management System",
         category: "web",
         description: "Online learning platform with course management and progress tracking.",
         fullDescription: "A sophisticated Learning Management System that enables educational institutions to deliver online courses, track student progress, conduct assessments, and manage educational content efficiently.",
-        image: "images/projects/lms.jpg",
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop",
         technologies: ["React", "Django", "PostgreSQL", "Docker"],
         features: ["Course Management", "Progress Tracking", "Assessments", "Video Streaming"],
-        liveUrl: "https://lms-platform.com",
-        githubUrl: "https://github.com/smartechn/lms"
+        liveUrl: "#",
+        githubUrl: "#"
+    },
+    {
+        id: 6,
+        title: "Healthcare Management System",
+        category: "web",
+        description: "Comprehensive healthcare platform for patient management and medical records.",
+        fullDescription: "A secure healthcare management system that streamlines patient registration, appointment scheduling, medical records management, and billing processes for healthcare facilities.",
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=250&fit=crop",
+        technologies: ["Angular", "Spring Boot", "PostgreSQL", "Azure"],
+        features: ["Patient Management", "Appointment Scheduling", "EHR", "Billing System"],
+        liveUrl: "#",
+        githubUrl: "#"
     }
 ];
 
 // Initialize Projects
 function initProjects() {
+    console.log('🔄 Initializing projects...');
     renderProjects('all');
     setupFilters();
     setupModal();
 }
 
-// Render Projects Grid
+// Render Projects with WORKING Images
 function renderProjects(filter = 'all') {
     const grid = document.getElementById('projectsGrid');
-    if (!grid) return;
+    if (!grid) {
+        console.log('❌ Projects grid not found');
+        return;
+    }
 
     const filteredProjects = filter === 'all' 
         ? projectsData 
         : projectsData.filter(project => project.category === filter);
 
-    grid.innerHTML = filteredProjects.map(project => `
+    grid.innerHTML = filteredProjects.map(project => {
+        return `
         <div class="project-card" data-category="${project.category}" data-aos="fade-up">
             <div class="project-image">
+                <img src="${project.image}" alt="${project.title}">
                 <div class="project-overlay">
                     <a href="#" class="view-project-btn" data-project="${project.id}">
                         View Project <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/400x250/667eea/white?text=Project+Image'">
             </div>
             <div class="project-info">
                 <div class="project-category">${project.category}</div>
@@ -108,10 +113,12 @@ function renderProjects(filter = 'all') {
                     ${project.technologies.slice(0, 3).map(tech => 
                         `<span class="tech-tag">${tech}</span>`
                     ).join('')}
+                    ${project.technologies.length > 3 ? `<span class="tech-tag">+${project.technologies.length - 3} more</span>` : ''}
                 </div>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 
     // Add click events to project cards
     document.querySelectorAll('.view-project-btn').forEach(btn => {
@@ -121,6 +128,8 @@ function renderProjects(filter = 'all') {
             openProjectModal(projectId);
         });
     });
+    
+    console.log(`✅ Rendered ${filteredProjects.length} projects`);
 }
 
 // Setup Filter Buttons
@@ -181,7 +190,7 @@ function openProjectModal(projectId) {
             </div>
             
             <div class="modal-image">
-                <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/800x400/667eea/white?text=Project+Image'">
+                <img src="${project.image}" alt="${project.title}">
             </div>
             
             <div class="modal-details">
@@ -230,6 +239,7 @@ function openProjectModal(projectId) {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Projects page loaded');
     initProjects();
     
     // Initialize AOS
@@ -241,4 +251,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
